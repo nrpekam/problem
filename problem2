@@ -1,0 +1,21 @@
+amtspent=[]
+n=int(input())
+avg=0
+for i in range(0,n):
+    amtspent.append(float(input()))
+    avg+=amtspent[i]
+avg=avg/n
+
+exchg1=0
+exchg2=0
+for i in range(0,n):
+    if(amtspent[i]<avg):
+        exchg1=avg-amtspent[i]
+    else:
+        exchg2=amtspent[i]-avg
+
+
+if(exchg1<exchg2):
+    print(exchg1)
+else:
+    print(exchg2)
